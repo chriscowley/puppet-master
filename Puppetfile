@@ -7,6 +7,3 @@ mod 'puppetlabs/inifile', '1.0.0'
 mod 'puppetlabs/postgresql', '3.2.0'
 mod 'puppetlabs/firewall', '0.4.2'
 
-# A module from Github
-mod 'yumrepos',
-  :git => 'https://github.com/chriscowley/puppet-yumrepos.git',
