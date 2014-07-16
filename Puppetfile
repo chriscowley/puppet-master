@@ -7,4 +7,4 @@ mod 'puppetlabs/inifile', '1.0.3'
 mod 'puppetlabs/postgresql', '3.3.3'
 mod 'puppetlabs/firewall', '1.0.2'
 mod 'chriscowley/yumrepos', '0.0.1'
-
+mod 'sensu/sensu', '1.0.0'
