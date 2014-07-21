@@ -5,5 +5,3 @@ node basenode {
 node default inherits basenode {
 }
 
-node 'monitor.chriscowley.lan' {
-}
