@@ -1,3 +1,5 @@
 ---
 classes:
+  - apache
   - graphite
+graphite::port: 9000
