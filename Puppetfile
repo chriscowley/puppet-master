@@ -7,8 +7,9 @@ mod 'puppetlabs/inifile', '1.0.3'
 mod 'puppetlabs/postgresql', '3.3.3'
 mod 'puppetlabs/firewall', '1.0.2'
 mod 'puppetlabs/apache'
-mod 'chriscowley/yumrepos', '0.0.1'
 mod 'footballradar/python', '0.1.0'
 
 mod 'graphite',
   :git => 'https://github.com/chriscowley/garethr-graphite.git'
+mod 'yumrepos',
+  :git => 'https://github.com/chriscowley/puppet-yumrepos.git'
