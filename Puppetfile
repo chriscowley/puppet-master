@@ -10,6 +10,6 @@ mod 'puppetlabs/apache'
 mod 'footballradar/python', '0.1.0'
 
 mod 'graphite',
-  :git => 'https://github.com/chriscowley/garethr-graphite.git'
+  :git => 'https://github.com/chriscowley/chriscowley-graphite.git'
 mod 'yumrepos',
   :git => 'https://github.com/chriscowley/puppet-yumrepos.git'
