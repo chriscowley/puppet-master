@@ -2,4 +2,6 @@
 classes:
   - yumrepos
   - yumrepos::gluster
-  - nfs
+  - nfs::server
+nfs::server::exports:
+  - '/srv/backup'
