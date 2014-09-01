@@ -8,6 +8,7 @@ mod 'puppetlabs/postgresql', '3.3.3'
 mod 'puppetlabs/firewall', '1.0.2'
 mod 'puppetlabs/apache'
 mod 'footballradar/python', '0.1.0'
+mod 'chriscowley/nfs'
 
 mod 'graphite',
   :git => 'https://github.com/chriscowley/chriscowley-graphite.git'
