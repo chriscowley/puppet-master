@@ -1,0 +1,13 @@
+---
+classes:
+  - yumrepos
+  - nfs::server
+nfs::server::exports:
+  - '/srv/family'
+  - '/srv/media'
+  - '/srv/movies'
+  - '/srv/tvshows'
+  - '/srv/music'
+  - '/srv/scratch'
+nfs::server::networkallowed: 192.168.1.0
+nfs::server::netmaskallowed: 256.255.255.0

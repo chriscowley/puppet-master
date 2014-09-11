@@ -2,3 +2,8 @@
 classes:
   - graphite
   - elasticsearch
+  - yumrepos::elasticsearch
+elasticsearch::java_install: true
+elasticsearch::status: running
+
+  
