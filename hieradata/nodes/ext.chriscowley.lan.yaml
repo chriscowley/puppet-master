@@ -2,5 +2,5 @@
 classes:
   - gitlab
 gitlab::gitlab_branch: 7.3-stable
-gitlab::external_url: gitlab.chriscowley.me.uk
+gitlab::external_url: https://gitlab.chriscowley.me.uk
   
