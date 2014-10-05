@@ -9,7 +9,6 @@ mod 'puppetlabs/firewall', '1.0.2'
 mod 'puppetlabs/apache'
 mod 'footballradar/python', '0.1.0'
 mod 'elasticsearch/elasticsearch'
-mod 'spuder/gitlab'
 
 mod 'graphite',
   :git => 'https://github.com/chriscowley/chriscowley-graphite.git'
@@ -17,3 +16,5 @@ mod 'yumrepos',
   :git => 'https://github.com/chriscowley/puppet-yumrepos.git'
 mod 'nfs',
   :git => 'https://github.com/chriscowley/chriscowley-nfs.git'
+mod 'gitlab',
+  :git => 'https://github.com/chriscowley/puppet-gitlab-1.git'
