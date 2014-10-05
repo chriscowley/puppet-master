@@ -1,6 +1,6 @@
 ---
 classes:
   - gitlab
-gitlab::gitlab_branch: 7.3-stable
+gitlab::gitlab_branch: 7.3.2
 gitlab::external_url: https://gitlab.chriscowley.me.uk
   
