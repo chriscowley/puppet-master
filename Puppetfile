@@ -9,6 +9,7 @@ mod 'puppetlabs/firewall', '1.0.2'
 mod 'puppetlabs/apache'
 mod 'footballradar/python', '0.1.0'
 mod 'elasticsearch/elasticsearch'
+mod 'thias/php'
 
 mod 'graphite',
   :git => 'https://github.com/chriscowley/chriscowley-graphite.git'
