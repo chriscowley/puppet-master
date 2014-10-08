@@ -1,6 +1,6 @@
 ---
 classes:
-  - gitlab
-gitlab::gitlab_branch: 7.3.2
-gitlab::external_url: https://gitlab.chriscowley.me.uk
+  - owncloud
+owncloud::servername: owncloud.chriscowley.me.uk
+owncloud::releasever: 7.0.2
   

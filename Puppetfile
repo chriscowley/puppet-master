@@ -18,3 +18,5 @@ mod 'nfs',
   :git => 'https://github.com/chriscowley/chriscowley-nfs.git'
 mod 'gitlab',
   :git => 'https://github.com/chriscowley/puppet-gitlab-1.git'
+mod 'owncloud',
+  :git => 'https://github.com/chriscowley/puppet-owncloud.git'
