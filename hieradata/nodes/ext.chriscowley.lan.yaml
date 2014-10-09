@@ -2,6 +2,7 @@
 classes:
   - owncloud
   - php::fpm::daemon
+  - yumrepos::remi
 owncloud::servername: owncloud.chriscowley.me.uk
 owncloud::releasever: 7.0.2
 owncloud::ssl: true
