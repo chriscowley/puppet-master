@@ -11,7 +11,7 @@ node 'ext.chriscowley.lan' inherits basenode {
   }
 
   include php::cli
-  php::module { [ 'mbstring', 'gd' ]: }
+  php::module { [ 'mbstring', 'gd', 'xml' 'pecl-sqlite', 'pdo']: }
   include php::fpm::daemon
   php::fpm::conf { 'www':
     listen  => '127.0.0.1:9000',
