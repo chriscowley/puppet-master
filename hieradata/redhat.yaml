@@ -1,5 +1,0 @@
----
-classes:
-  - yumrepos
-  - yumrepos::chriscowley
-yumrepos::centos_baseurl: http://vault.chriscowley.lan/mirror
