@@ -2,3 +2,4 @@
 classes:
   - puppetdb
   - puppetdb::master::config
+puppetdb::master::config::puppet_service_name: puppetserver
