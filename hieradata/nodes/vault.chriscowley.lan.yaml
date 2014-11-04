@@ -4,6 +4,7 @@ classes:
   - nfs::server
 nfs::server::exports:
   - '/srv/family'
+  - '/srv/iso'
   - '/srv/media'
   - '/srv/movies'
   - '/srv/tvshows'
