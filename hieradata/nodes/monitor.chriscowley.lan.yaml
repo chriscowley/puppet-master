@@ -4,10 +4,12 @@ classes:
   - elasticsearch
   - yumrepos::elasticsearch
   - rabbitmq
+  - redis
   - sensu
 elasticsearch::java_install: true
 elasticsearch::status: running
 rabbitmq::port: 5672
+redis::version: 2.8.8
 sensu::install_repo: true
 sensu::purge_config: true
 sensu::rabbitmq_host: 192.168.1.108
