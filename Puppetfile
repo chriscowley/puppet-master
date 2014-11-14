@@ -11,6 +11,9 @@ mod 'footballradar/python', '0.1.0'
 mod 'elasticsearch/elasticsearch'
 mod 'thias/php'
 mod 'thias/nginx'
+mod 'sensu/sensu'
+mod 'puppetlabs/apt'
+
 
 mod 'graphite',
   :git => 'https://github.com/chriscowley/chriscowley-graphite.git'
