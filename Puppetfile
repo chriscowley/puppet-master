@@ -9,8 +9,6 @@ mod 'puppetlabs/firewall', '1.0.2'
 mod 'puppetlabs/apache'
 mod 'nanliu/staging'
 mod 'puppetlabs/rabbitmq'
-mod 'gsick/redis'
-mod 'footballradar/python', '0.1.0'
 mod 'elasticsearch/elasticsearch'
 mod 'thias/php'
 mod 'thias/nginx'
@@ -28,3 +26,5 @@ mod 'gitlab',
   :git => 'https://github.com/chriscowley/puppet-gitlab-1.git'
 mod 'owncloud',
   :git => 'https://github.com/chriscowley/puppet-owncloud.git'
+mod 'redis',
+  :git => 'https://github.com/chriscowley/chriscowley-redis.git'
