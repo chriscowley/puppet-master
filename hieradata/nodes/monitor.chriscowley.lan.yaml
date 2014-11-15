@@ -6,6 +6,6 @@ classes:
 elasticsearch::java_install: true
 elasticsearch::status: running
 sensu::server: true
-
+sensu::api: true
 
   
