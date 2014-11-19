@@ -8,11 +8,12 @@ node default inherits basenode {
 node 'puppet.chriscowley.lan' inherits basenode {
   class { 'hiera':
     hierarchy => [
+      'defaults',
       '%{environment}/%{calling_class}',
       "nodes/%{clientcert}",
       "virtual/%{::virtual}",
       '%{environment}',
-      '"%{::osfamily}"',
+      '%{::osfamily}',
       'common',
     ],
     datadir => '/etc/puppet/environments/%{::environment}/hieradata'
