@@ -6,6 +6,7 @@ mod 'puppetlabs/concat', '1.0.0'
 mod 'puppetlabs/inifile', '1.0.3'
 mod 'puppetlabs/postgresql', '3.3.3'
 mod 'puppetlabs/firewall', '1.0.2'
+mod 'hunner/hiera', '1.1.0'
 mod 'puppetlabs/apache'
 mod 'nanliu/staging'
 mod 'puppetlabs/rabbitmq'
@@ -14,7 +15,6 @@ mod 'thias/php'
 mod 'thias/nginx'
 mod 'sensu/sensu'
 mod 'puppetlabs/apt'
-
 
 mod 'graphite',
   :git => 'https://github.com/chriscowley/chriscowley-graphite.git'

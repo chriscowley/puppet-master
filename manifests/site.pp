@@ -5,6 +5,20 @@ node basenode {
 node default inherits basenode {
 }
 
+node 'puppet.chriscowley.lan' inherits basenode {
+  class { 'hiera':
+    hierarchy => [
+      '%{environment}/%{calling_class}',
+      "nodes/%{clientcert}",
+      "virtual/%{::virtual}",
+      '%{environment}',
+      '"%{::osfamily}"',
+      'common',
+    ],
+    datadir => '/etc/puppet/environments/%{::environment}/hieradata'
+  }
+}
+
 node 'monitor.chriscowley.lan' inherits basenode {
   sensu::handler { 'default':
     command => 'mail -s \'sensu alert\' ops@foo.com',
