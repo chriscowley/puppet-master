@@ -16,6 +16,8 @@ mod 'thias/nginx'
 mod 'sensu/sensu'
 mod 'puppetlabs/apt'
 
+mod 'localdata',
+    :git => 'https://github.com/chriscowley/puppet-localdata.git'
 mod 'graphite',
   :git => 'https://github.com/chriscowley/chriscowley-graphite.git'
 mod 'yumrepos',
