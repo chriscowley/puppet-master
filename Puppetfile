@@ -27,3 +27,5 @@ mod 'owncloud',
   :git => 'https://github.com/chriscowley/puppet-owncloud.git'
 mod 'redis',
   :git => 'https://github.com/chriscowley/chriscowley-redis.git'
+mod 'localdata',
+  :git => 'https://github.com/chriscowley/puppet-localdata.git'

@@ -7,5 +7,6 @@ elasticsearch::java_install: true
 elasticsearch::status: running
 sensu::server: true
 sensu::api: true
-
+sensu::plugins:
+  - 'puppet:///localdata/sensu/plugins/check-procs.rb'
   
