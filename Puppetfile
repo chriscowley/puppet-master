@@ -17,6 +17,8 @@ mod 'sensu/sensu'
 mod 'puppetlabs/apt'
 mod 'hawknewton/pulp'
 
+mod 'localdata',
+    :git => 'https://github.com/chriscowley/puppet-localdata.git'
 mod 'graphite',
   :git => 'https://github.com/chriscowley/chriscowley-graphite.git'
 mod 'yumrepos',
