@@ -8,5 +8,5 @@ elasticsearch::status: running
 sensu::server: true
 sensu::api: true
 sensu::plugins:
-  - 'puppet:///localdata/sensu/plugins/check-procs.rb'
+  - 'puppet:///modules/localdata/sensu/plugins/check-procs.rb'
   
