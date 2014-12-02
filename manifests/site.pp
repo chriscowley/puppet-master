@@ -29,7 +29,7 @@ node 'monitor.chriscowley.lan' inherits basenode {
   sensu::check { 'check_cron':
     command => '/etc/sensu/plugins/check-procs.rb -p crond -C 1',
     handlers => 'default',
-    subscribers => 'webservers',
+    subscribers => 'cron',
   }
 #
 #  sensu::check { 'check_ntp':
@@ -38,6 +38,7 @@ node 'monitor.chriscowley.lan' inherits basenode {
 #    subscribers => 'sensu-test'
 #  }
 }
+
 
 node 'ext.chriscowley.lan' inherits basenode {
   php::ini { '/etc/php.ini':
