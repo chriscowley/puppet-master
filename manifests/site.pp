@@ -3,6 +3,14 @@ node basenode {
 }
 
 node default inherits basenode {
+  sensu::handler { 'default':
+    command => 'mail -s \'sensu alert\' ops@foo.com',
+  }
+  sensu::check { 'check_cron':
+    command => '/etc/sensu/plugins/check-procs.rb -p crond -C 1',
+    handlers => 'default',
+    subscribers => 'cron',
+  }
 }
 
 node 'puppet.chriscowley.lan' inherits basenode {
