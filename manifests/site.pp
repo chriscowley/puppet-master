@@ -11,6 +11,9 @@ node default inherits basenode {
     handlers => 'default',
     subscribers => 'cron',
   }
+  class { 'rabbitmq':
+    port =>  '5672',
+  }
 }
 
 node 'puppet.chriscowley.lan' inherits basenode {
