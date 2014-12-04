@@ -9,6 +9,7 @@ ntp::servers:
   - 1.centos.pool.ntp.org
   - 2.centos.pool.ntp.org
   - 3.centos.pool.ntp.org
+rabbitmq::port: 5672
 sensu::install_repo: true
 sensu::purge_config: true
 sensu::rabbitmq_host: 192.168.1.108
