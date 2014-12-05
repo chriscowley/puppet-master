@@ -29,9 +29,6 @@ node default inherits basenode {
 }
 
 node 'puppet.chriscowley.lan' inherits basenode {
-}
-
-node 'puppet.chriscowley.lan' inherits basenode {
   class { 'hiera':
     hierarchy => [
       'secure',
