@@ -11,6 +11,11 @@ node default inherits basenode {
     handlers => 'default',
     subscribers => 'base',
   }
+  sensu::check { 'check_dns':
+    command => '/etc/sensu/plugins/check-dns.rb -d www.bbc.co.uk -s 192.168.1.2 -r 212.58.246.93',
+    handlers => 'default',
+    subscribers => 'base',
+  }
   class { 'rabbitmq':
     port =>  '5672',
   }
