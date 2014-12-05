@@ -14,5 +14,6 @@ sensu::rabbitmq_host: 192.168.1.108
 sensu::rabbitmq_password: password
 sensu::rabbitmq_port: 5672
 sensu::rabbitmq_vhost: '/sensu'
+sensu::use_embedded_ruby: true
 sensu::subscriptions:
     - cron
