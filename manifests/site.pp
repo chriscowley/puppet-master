@@ -14,6 +14,12 @@ node default inherits basenode {
   class { 'rabbitmq':
     port =>  '5672',
   }
+  file { '/etc/sensu/plugins/check-procs.rb':
+      mode   => 755,
+      owner  => 'root',
+      group  => 'root',
+      source =>  'puppet:///modules/localdata/sensu/plugins/check-procs.rb',
+    }
 }
 
 node 'puppet.chriscowley.lan' inherits basenode {
@@ -34,13 +40,13 @@ node 'puppet.chriscowley.lan' inherits basenode {
 }
 
 node 'monitor.chriscowley.lan' inherits basenode {
-  sensu::handler { 'default':
-    command => 'mail -s \'sensu alert\' ops@foo.com',
+  rabbitmq_user { 'sensu':
+    admin    => false,
+    password => 'password',
+
   }
-  sensu::check { 'check_cron':
-    command => '/etc/sensu/plugins/check-procs.rb -p crond -C 1',
-    handlers => 'default',
-    subscribers => 'cron',
+  rabbitmq_vhost { '/sensu':
+    ensure => present,
   }
 }
 
