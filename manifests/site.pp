@@ -42,12 +42,6 @@ node 'monitor.chriscowley.lan' inherits basenode {
     handlers => 'default',
     subscribers => 'cron',
   }
-#
-#  sensu::check { 'check_ntp':
-#    command     => 'PATH=$PATH:/usr/lib/nagios/plugins check_ntp_time -H pool.ntp.org -w 30 -c 60',
-#    handlers    => 'default',
-#    subscribers => 'sensu-test'
-#  }
 }
 
 
