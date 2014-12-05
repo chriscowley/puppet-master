@@ -40,14 +40,6 @@ node 'puppet.chriscowley.lan' inherits basenode {
 }
 
 node 'monitor.chriscowley.lan' inherits basenode {
-  sensu::handler { 'default':
-    command => 'mail -s \'sensu alert\' ops@foo.com',
-  }
-  sensu::check { 'check_cron':
-    command => '/etc/sensu/plugins/check-procs.rb -p crond -C 1',
-    handlers => 'default',
-    subscribers => 'cron',
-  }
   rabbitmq_user { 'sensu':
     admin    => false,
     password => 'password',
@@ -56,12 +48,6 @@ node 'monitor.chriscowley.lan' inherits basenode {
   rabbitmq_vhost { '/sensu':
     ensure => present,
   }
-#
-#  sensu::check { 'check_ntp':
-#    command     => 'PATH=$PATH:/usr/lib/nagios/plugins check_ntp_time -H pool.ntp.org -w 30 -c 60',
-#    handlers    => 'default',
-#    subscribers => 'sensu-test'
-#  }
 }
 
 
