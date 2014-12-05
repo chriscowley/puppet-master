@@ -9,7 +9,7 @@ node default inherits basenode {
   sensu::check { 'check_cron':
     command => '/etc/sensu/plugins/check-procs.rb -p crond -C 1',
     handlers => 'default',
-    subscribers => 'cron',
+    subscribers => 'base',
   }
   class { 'rabbitmq':
     port =>  '5672',
@@ -20,6 +20,15 @@ node default inherits basenode {
       group  => 'root',
       source =>  'puppet:///modules/localdata/sensu/plugins/check-procs.rb',
     }
+  file { '/etc/sensu/plugins/check-dns.rb':
+      mode   => 755,
+      owner  => 'root',
+      group  => 'root',
+      source =>  'puppet:///modules/localdata/sensu/plugins/check-dns.rb',
+    }
+}
+
+node 'puppet.chriscowley.lan' inherits basenode {
 }
 
 node 'puppet.chriscowley.lan' inherits basenode {
@@ -40,6 +49,19 @@ node 'puppet.chriscowley.lan' inherits basenode {
 }
 
 node 'monitor.chriscowley.lan' inherits basenode {
+  sensu::handler { 'default':
+    command => 'mail -s \'sensu alert\' ops@foo.com',
+  }
+  sensu::check { 'check_cron':
+    command => '/etc/sensu/plugins/check-procs.rb -p crond -C 1',
+    handlers => 'default',
+    subscribers => 'base',
+  }
+  sensu::check { 'check_dns':
+    command => '/etc/sensu/plugins/check-dns.rb -d www.bbc.co.uk -s 192.168.1.2 -r 212.58.246.93',
+    handlers => 'default',
+    subscribers => 'base',
+  }
   rabbitmq_user { 'sensu':
     admin    => false,
     password => 'password',
