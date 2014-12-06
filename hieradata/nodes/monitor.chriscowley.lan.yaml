@@ -9,4 +9,4 @@ sensu::server: true
 sensu::api: true
 sensu::plugins:
   - 'puppet:///modules/localdata/sensu/plugins/check-procs.rb'
-  
+  - 'puppet:///modules/localdata/sensu/plugins/check-dns.rb' 

@@ -19,18 +19,6 @@ node default inherits basenode {
   class { 'rabbitmq':
     port =>  '5672',
   }
-  file { '/etc/sensu/plugins/check-procs.rb':
-      mode   => 755,
-      owner  => 'root',
-      group  => 'root',
-      source =>  'puppet:///modules/localdata/sensu/plugins/check-procs.rb',
-    }
-  file { '/etc/sensu/plugins/check-dns.rb':
-      mode   => 755,
-      owner  => 'root',
-      group  => 'root',
-      source =>  'puppet:///modules/localdata/sensu/plugins/check-dns.rb',
-    }
 }
 
 node 'puppet.chriscowley.lan' inherits basenode {
@@ -50,20 +38,7 @@ node 'puppet.chriscowley.lan' inherits basenode {
   }
 }
 
-node 'monitor.chriscowley.lan' inherits basenode {
-  sensu::handler { 'default':
-    command => 'mail -s \'sensu alert\' ops@foo.com',
-  }
-  sensu::check { 'check_cron':
-    command => '/etc/sensu/plugins/check-procs.rb -p crond -C 1',
-    handlers => 'default',
-    subscribers => 'base',
-  }
-  sensu::check { 'check_dns':
-    command => '/etc/sensu/plugins/check-dns.rb -d www.bbc.co.uk -s 192.168.1.2 -r 212.58.246.93',
-    handlers => 'default',
-    subscribers => 'base',
-  }
+node 'monitor.chriscowley.lan' inherits default {
   rabbitmq_user { 'sensu':
     admin    => false,
     password => 'password',
@@ -75,7 +50,7 @@ node 'monitor.chriscowley.lan' inherits basenode {
 }
 
 
-node 'ext.chriscowley.lan' inherits basenode {
+node 'ext.chriscowley.lan' inherits default {
   php::ini { '/etc/php.ini':
     memory_limit   => '256M',
     upload_max_filesize => '1G',
