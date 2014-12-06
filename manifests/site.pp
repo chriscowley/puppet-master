@@ -12,7 +12,7 @@ node default inherits basenode {
     subscribers => 'base',
   }
   sensu::check { 'check_dns':
-    command => '/etc/sensu/plugins/check-dns.rb -d www.bbc.co.uk -s 192.168.1.2 -r 212.58.246.93',
+    command => '/etc/sensu/plugins/check-dns.rb -d google-public-dns-a.google.com -s 192.168.1.2 -r 8.8.8.8',
     handlers => 'default',
     subscribers => 'base',
   }
