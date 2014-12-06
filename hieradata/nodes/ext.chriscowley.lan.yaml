@@ -6,3 +6,4 @@ classes:
 owncloud::servername: owncloud.chriscowley.me.uk
 owncloud::releasever: 7.0.2
 owncloud::ssl: true
+php::fpm::daemon::log_owner: apache
