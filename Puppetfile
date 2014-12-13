@@ -26,6 +26,8 @@ mod 'nfs',
 mod 'owncloud',
   :git => 'https://github.com/chriscowley/puppet-owncloud.git'
 mod 'redis',
-  :git => 'https://github.com/chriscowley/chriscowley-redis.git'
+  :git => 'https://github.com/chriscowley/chriscowley-redis.git',
+  :commit => '208c01aaf2435839ada26d3f7187ca80517fa2a8'
 mod 'localdata',
-  :git => 'https://github.com/chriscowley/puppet-localdata.git'
+  :git => 'https://github.com/chriscowley/puppet-localdata.git',
+  :commit => 'c32e497f3ad10e59cb69977d73e2cc690b05c48e'
