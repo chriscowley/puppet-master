@@ -36,9 +36,6 @@ node default inherits basenode {
     subscribers => 'base',
     require     => Staging::Deploy['sensu-community-plugins.tar.gz'],
   }
-  class { 'rabbitmq':
-    port =>  '5672',
-  }
 }
 
 node 'puppet.chriscowley.lan' inherits basenode {
