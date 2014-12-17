@@ -38,7 +38,7 @@ node default inherits basenode {
   }
 }
 
-node 'puppet.chriscowley.lan' inherits basenode {
+node 'puppet.chriscowley.lan' inherits default {
   class { 'hiera':
     hierarchy => [
       'secure',
@@ -84,3 +84,6 @@ node 'ext.chriscowley.lan' inherits default {
   }
 }
 
+node 'store.chriscowley.lan' inherits default {
+  docker::image { 'base': }
+}
