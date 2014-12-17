@@ -85,5 +85,10 @@ node 'ext.chriscowley.lan' inherits default {
 }
 
 node 'store.chriscowley.lan' inherits default {
-  docker::image { 'base': }
+  docker::image { 'base':
+    ensure => 'absent',
+  }
+  docker::image { 'centos':
+    image_tag = 'centos7',
+  }
 }
