@@ -89,6 +89,9 @@ node 'store.chriscowley.lan' inherits default {
     ensure => 'absent',
   }
   docker::image { 'centos':
-    image_tag = 'centos7',
+    image_tag => 'centos7',
+  }
+  docker::image { 'ubuntu':
+    image_tag => 'trusty',
   }
 }
