@@ -4,3 +4,4 @@ classes:
   - yumrepos::gluster
   - docker
 sensu::repo_source: http://repos.sensuapp.org/yum/el/6/x86_64/
+docker::use_upstream_package_source: false
