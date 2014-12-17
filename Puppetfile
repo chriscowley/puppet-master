@@ -16,6 +16,7 @@ mod 'thias/nginx'
 mod 'sensu/sensu'
 mod 'puppetlabs/apt'
 mod 'hawknewton/pulp'
+mod 'garethr/docker'
 
 mod 'graphite',
   :git => 'https://github.com/chriscowley/chriscowley-graphite.git'
