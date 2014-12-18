@@ -80,8 +80,8 @@ node 'monitor.chriscowley.lan' inherits default {
   }]
 
   class { 'uchiwa':
-    install_repo       => false,
-    sensu_api_endpoint => $uchiwa_api_config,
+    install_repo        => false,
+    sensu_api_endpoints => $uchiwa_api_config,
   }
 }
 
