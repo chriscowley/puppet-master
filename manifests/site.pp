@@ -72,16 +72,13 @@ node 'monitor.chriscowley.lan' inherits default {
     name    => 'Site 1',
     port    => '4567',
     timeout => '5',
-  },{
-    host => '0.0.0.0',
-    port => '3000',
-    user => 'admin',
-    pass => 'secret'
   }]
 
   class { 'uchiwa':
     install_repo        => false,
     sensu_api_endpoints => $uchiwa_api_config,
+    user                => 'admin',
+    pass                => 'secret',
   }
 }
 
