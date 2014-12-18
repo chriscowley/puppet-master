@@ -6,6 +6,9 @@ node default inherits basenode {
   package { 'wget':
     ensure => installed,
   }
+  package { 'bind-utils':
+    ensure => installed,
+  }
   file { '/opt/sensu-plugins':
     ensure  => directory,
     require => Package['wget']
