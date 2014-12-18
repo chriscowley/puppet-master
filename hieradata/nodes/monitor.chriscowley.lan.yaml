@@ -3,7 +3,6 @@ classes:
   - graphite
   - elasticsearch
   - yumrepos::elasticsearch
-  - uchiwa
 elasticsearch::java_install: true
 elasticsearch::status: running
 sensu::server: true
@@ -11,4 +10,3 @@ sensu::api: true
 sensu::plugins:
   - 'puppet:///modules/localdata/sensu/plugins/check-procs.rb'
   - 'puppet:///modules/localdata/sensu/plugins/check-dns.rb' 
-uchiwa::install_repo: false

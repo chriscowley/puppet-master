@@ -67,17 +67,21 @@ node 'monitor.chriscowley.lan' inherits default {
   rabbitmq_vhost { '/sensu':
     ensure => present,
   }
-  $uchiwa_api_config = [
-    {
-      host     => 'monitor.chriscowley.lan',
-      port     => 3000,
-      user     => 'admin',
-      pass     => 'secret',
-    }
-  ]
+  $uchiwa_api_config = [{
+    host    => 'monitor.chriscowley.lan',
+    name    => 'Site 1',
+    port    => '4567',
+    timeout => '5',
+  },{
+    host => '0.0.0.0',
+    port => '3000',
+    user => 'admin',
+    pass => 'secret'
+  }]
 
   class { 'uchiwa':
-    sensu_api_endpoints =>  $uchiwa_api_config,
+    install_repo       => false,
+    sensu_api_endpoint => $uchiwa_api_config,
   }
 }
 
