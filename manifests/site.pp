@@ -95,8 +95,9 @@ node 'ext.chriscowley.lan' inherits default {
   php::module { [ 'mbstring', 'gd', 'xml', 'pecl-sqlite', 'pdo']: }
   include php::fpm::daemon
   php::fpm::conf { 'www':
-    listen  => '127.0.0.1:9000',
-    user    => 'nginx',
+    listen                    => '127.0.0.1:9000',
+    user                      => 'nginx',
+    request_terminate_timeout => '300',
   }
 }
 
