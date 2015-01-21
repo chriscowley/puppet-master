@@ -33,3 +33,6 @@ mod 'redis',
 mod 'localdata',
   :git => 'https://github.com/chriscowley/puppet-localdata.git',
   :commit => 'c32e497f3ad10e59cb69977d73e2cc690b05c48e'
+mod 'ovirtagent',
+    :git => 'https://github.com/chriscowley/chriscowley-ovirtagent.git',
+    :commit => '1363e48636b35c3390b75d3c83620ea8f95c3e2b'

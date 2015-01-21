@@ -3,6 +3,11 @@ classes:
   - yumrepos
   - yumrepos::gluster
   - docker
+nfs::server::exports:
+  - '/srv/images'
+  - '/srv/iso'
+nfs::server::networkallowed: 192.168.1.0
+nfs::server::netmaskallowed: 255.255.255.0
 sensu::repo_source: http://repos.sensuapp.org/yum/el/6/x86_64/
 docker::use_upstream_package_source: false
 docker::dns: 192.168.1.2
