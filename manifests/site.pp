@@ -84,7 +84,7 @@ node 'monitor.chriscowley.lan' inherits default {
 
 node 'ci.chriscowley.lan' inherits default {
   class {'network::global':
-    gateway = '192.168.1.1',
+    gateway => '192.168.1.1',
   }
   network::if::static { 'eth0':
     ensure     => 'up',
