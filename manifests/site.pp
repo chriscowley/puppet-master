@@ -41,6 +41,21 @@ node default inherits basenode {
   }
 }
 
+node 'dns.chriscowley.lan' inherits default {
+  class {'network::global':
+    gateway => '192.168.1.1',
+  }
+  network::if::static { 'eth0':
+    ensure     => 'up',
+    ipaddress  => '192.168.1.2',
+    netmask    => '255.255.255.0',
+    dns1       => '192.168.1.1',
+    macaddress => $::macaddress_eth0,
+    domain     => 'chriscowley.lan',
+  }
+}
+
+
 node 'puppet.chriscowley.lan' inherits default {
   class { 'hiera':
     hierarchy => [
@@ -93,7 +108,7 @@ node 'ci.chriscowley.lan' inherits default {
     ensure     => 'up',
     ipaddress  => '192.168.1.10',
     netmask    => '255.255.255.0',
-    dns1       => '192.168.1.1',
+    dns1       => '192.168.1.2',
     macaddress => $::macaddress_eth0,
     domain     => 'chriscowley.lan',
   }
