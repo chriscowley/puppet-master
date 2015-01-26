@@ -47,8 +47,8 @@ node 'puppet.chriscowley.lan' inherits default {
       'secure',
       'defaults',
       '%{environment}/%{calling_class}',
-      "nodes/%{clientcert}",
-      "virtual/%{virtual}",
+      'nodes/%{clientcert}',
+      'virtual/%{virtual}',
       '%{environment}',
       '%{::osfamily}',
       'common',
@@ -89,7 +89,7 @@ node 'ci.chriscowley.lan' inherits default {
   network::if::static { 'eth0':
     ensure     => 'up',
     ipaddress  => '192.168.1.1',
-    netmask    => '255.255.255.0'
+    netmask    => '255.255.255.0',
     dns1       => '192.168.1.1',
     macaddress => $::macaddress_eth0,
     domain     => 'chriscowley.lan',
@@ -98,7 +98,7 @@ node 'ci.chriscowley.lan' inherits default {
 
 node 'ext.chriscowley.lan' inherits default {
   php::ini { '/etc/php.ini':
-    memory_limit   => '256M',
+    memory_limit        => '256M',
     upload_max_filesize => '1G',
     post_max_size       => '1G',
     output_buffering    => '0',
