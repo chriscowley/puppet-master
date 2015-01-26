@@ -71,6 +71,12 @@ node 'puppet.chriscowley.lan' inherits default {
     datadir => '/etc/puppet/environments/%{::environment}/hieradata',
     eyaml   => true,
   }
+  class { 'puppetboard':
+    manage_git        => false,
+    manage_virtualenv =>  true,
+  }
+
+
 }
 
 node 'monitor.chriscowley.lan' inherits default {

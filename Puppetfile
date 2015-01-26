@@ -18,6 +18,7 @@ mod 'puppetlabs/apt'
 mod 'hawknewton/pulp'
 mod 'garethr/docker'
 mod 'yelp/uchiwa'
+mod 'nibalizer/puppetboard'
 
 mod 'graphite',
   :git => 'https://github.com/chriscowley/chriscowley-graphite.git'
