@@ -59,6 +59,9 @@ node 'puppet.chriscowley.lan' inherits default {
 }
 
 node 'monitor.chriscowley.lan' inherits default {
+  network::if::dynamic { 'eth0':
+    ensure => up,
+  }
   rabbitmq_user { 'sensu':
     admin    => false,
     password => 'password',
