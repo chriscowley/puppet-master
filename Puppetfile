@@ -36,3 +36,6 @@ mod 'localdata',
 mod 'ovirtagent',
     :git => 'https://github.com/chriscowley/chriscowley-ovirtagent.git',
     :commit => '1363e48636b35c3390b75d3c83620ea8f95c3e2b'
+mod 'network',
+    :git => 'https://github.com/chriscowley/puppet-network.git',
+    :commit => '5b9bf7f79163a205dd759504cada881c6a0265e0'

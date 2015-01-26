@@ -48,7 +48,7 @@ node 'puppet.chriscowley.lan' inherits default {
       'defaults',
       '%{environment}/%{calling_class}',
       "nodes/%{clientcert}",
-      "virtual/%{::virtual}",
+      "virtual/%{virtual}",
       '%{environment}',
       '%{::osfamily}',
       'common',
@@ -82,6 +82,19 @@ node 'monitor.chriscowley.lan' inherits default {
   }
 }
 
+node 'ci.chriscowley.lan' inherits default {
+  class {'network::global':
+    gateway = '192.168.1.1',
+  }
+  network::if::static { 'eth0':
+    ensure     => 'up',
+    ipaddress  => '192.168.1.1',
+    netmask    => '255.255.255.0'
+    dns1       => '192.168.1.1',
+    macaddress => $::macaddress_eth0,
+    domain     => 'chriscowley.lan',
+  }
+}
 
 node 'ext.chriscowley.lan' inherits default {
   php::ini { '/etc/php.ini':
