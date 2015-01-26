@@ -88,7 +88,7 @@ node 'ci.chriscowley.lan' inherits default {
   }
   network::if::static { 'eth0':
     ensure     => 'up',
-    ipaddress  => '192.168.1.1',
+    ipaddress  => '192.168.1.10',
     netmask    => '255.255.255.0',
     dns1       => '192.168.1.1',
     macaddress => $::macaddress_eth0,
