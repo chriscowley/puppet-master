@@ -71,9 +71,15 @@ node 'puppet.chriscowley.lan' inherits default {
     datadir => '/etc/puppet/environments/%{::environment}/hieradata',
     eyaml   => true,
   }
+  class {'apache': }
+  class {'apache::mod::wsgi': }
   class { 'puppetboard':
     manage_git        => false,
     manage_virtualenv =>  true,
+  }
+  class { 'puppetboard::apache::vhost':
+    vhost_name => 'puppetboard.chriscowley.lan',
+    port       => 80,
   }
 
 
