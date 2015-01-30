@@ -1,0 +1,8 @@
+---
+classes:
+  - razor
+  - postgresql::globals
+  - postgresql::server
+postgresql::globals::manage_package_repo: true
+postgresql::globals::version: '9.2'
+    
