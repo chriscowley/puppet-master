@@ -22,6 +22,8 @@ mod 'nibalizer/puppetboard'
 mod 'stankevich/python', '1.8.2'
 mod 'puppetlabs/vcsrepo', '1.2.0'
 mod 'puppetlabs/razor', '0.11.0'
+mod 'puppetlabs/java', '1.3.0'
+
 
 mod 'graphite',
   :git => 'https://github.com/chriscowley/chriscowley-graphite.git'
