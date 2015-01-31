@@ -62,8 +62,7 @@ node 'dns.chriscowley.lan' inherits default {
   postgresql::server::db {'razor':
     user     => 'razor',
     password => postgresql_password('razor', 'mypass')
-  } ->
-  class {'razor':}
+  }
 }
 
 
