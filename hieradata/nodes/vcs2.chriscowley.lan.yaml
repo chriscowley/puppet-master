@@ -1,7 +1,7 @@
 ---
 classes:
   - gitlab
-gitlab::gitlab_branch: '7.7.2'
+gitlab::gitlab_branch: '7.4.2'
 gitlab::external_url: http://gitlab.chriscowley.me.uk
 puppet_manage_config: true
 puppet_manage_backups: true
