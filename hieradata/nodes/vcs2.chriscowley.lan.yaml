@@ -1,0 +1,10 @@
+---
+classes:
+  - gitlab
+gitlab::gitlab_branch: '7.7.2'
+gitlab::external_url: http://gitlab.chriscowley.me.uk
+puppet_manage_config: true
+puppet_manage_backups: true
+puppet_manage_packages: true
+backup_keep_time: 5184000
+

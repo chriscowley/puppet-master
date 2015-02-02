@@ -25,6 +25,7 @@ mod 'puppetlabs/razor', '0.11.0'
 mod 'puppetlabs/java', '1.3.0'
 mod 'puppetlabs/tftp', '0.2.3'
 mod 'puppetlabs/xinetd', '1.4.0'
+mod 'spuder/gitlab', '2.3.5'
 
 
 mod 'graphite',
