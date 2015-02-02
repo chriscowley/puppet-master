@@ -2,9 +2,10 @@
 classes:
   - gitlab
 gitlab::gitlab_branch: '7.4.2'
-gitlab::external_url: http://gitlab.chriscowley.me.uk
-puppet_manage_config: true
-puppet_manage_backups: true
-puppet_manage_packages: true
-backup_keep_time: 5184000
+gitlab::external_url: 'http://gitlab.chriscowley.me.uk'
+gitlab::gitlab_download_link: 'https://downloads-packages.s3.amazonaws.com/centos-6.6/gitlab-7.7.2_omnibus.5.4.2.ci-1.el6.x86_64.rpm'
+gitlab::puppet_manage_config: true
+gitlab::puppet_manage_backups: true
+gitlab::puppet_manage_packages: true
+gitlab::backup_keep_time: 5184000
 
