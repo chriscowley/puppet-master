@@ -3,9 +3,9 @@ node basenode {
 }
 
 node default inherits basenode {
-  #  package { 'wget':
-  #  ensure => installed,
-  #}
+  package { 'wget':
+    ensure => installed,
+  }
   package { 'bind-utils':
     ensure => installed,
   }

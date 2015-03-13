@@ -1,0 +1,3 @@
+---
+sensu::repo_source: http://repos.sensuapp.org/yum/el/6/x86_64/
+
